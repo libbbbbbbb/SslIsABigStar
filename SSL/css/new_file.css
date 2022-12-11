@@ -1,0 +1,213 @@
+	body{
+			margin: 0px 0px;
+			padding: 0px 0px;
+			position: relative;
+		}
+		#loudspeaker{
+			position: relative;
+			width: 50px;
+			height: 50px;
+			float: right;
+			right: 30px;
+			top: 30px;
+			transform: rotate(100deg);
+			animation: music_icon 2s infinite;
+		  animation-direction:alternate;
+		  animation-delay:2s;
+		}
+	@keyframes music_icon{
+		0%{
+			
+			transform: rotate(100deg);
+			width: 50px;
+			height: 50px;
+		}
+		30%{
+			width: 60px;
+			height: 60px;
+		}
+		35%{
+			width: 50px;
+			height: 50px;
+		}
+		40%{
+			width: 60px;
+			height: 60px;
+		}
+		100%{
+			transform: rotate(25deg);
+		}
+	}
+		#icon_all{
+			width: 90%;
+			height: 1300px;
+			position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,15%);
+            overflow: hidden;
+		}
+		#flag{
+			height: 160px;
+			left: -5%;
+			width: 110%;
+			position: absolute;
+			display: flex;
+			background-image: url(../icon/flag_rrr.png);
+
+			background-size: contain;
+			animation: flag 3s ease;
+		  	animation-direction:alternate;
+
+		}
+		
+	@keyframes flag{
+		0%{
+			left: -100%;
+		}
+		70%{
+			left: 1%;
+		}
+		100%{
+			left: -5%;
+			}
+			
+	}
+		#cake{
+			width: 90%;
+			height: 60%;
+			position: absolute;
+            top:0%;
+            left:50%;
+            transform: translate(-50%,10%);
+            background: url(../icon/all_not_balloon.png) no-repeat;
+            background-size: contain;
+            background-position: center center;
+            animation: cake 0.8s ease;
+		  	animation-direction:alternate;
+		  	margin-top: 15%;
+			
+		}
+	@keyframes cake{
+		0%{
+			
+			top: -100%;
+		}
+		100%{
+			top: 0%;
+		}
+		
+	}
+		#gift{
+			width: 50%;
+			height: 35%;
+			margin: 100% 0% 0% 0%;
+			position: absolute;
+		}
+		#loud_right{
+			margin: 110% -50% -50% 0%;
+			width: 20%;
+			height: 16%;
+			float: right;
+			transform: rotate(150deg);
+			animation: right 0.8s ease;
+		  	animation-direction:alternate;
+		  	animation-delay: 2s;
+		}
+	@keyframes right{
+		from{margin: 110% -50% -50% 0%;}
+		to{margin: 115% 10% 0% 0%;}
+	}
+		#envelopes_one{
+			width: 35%;
+			height: 35%;
+			left: -50%;
+			top: 15%;
+			position: absolute;
+			animation: one 0.8s ease;
+		  	animation-direction:alternate;
+		  	animation-delay: 2.1s;
+		}
+	@keyframes one{
+		from{left: -50%;}
+		to{left: 32%;}
+		
+	}
+		#envelopes_three{
+			width: 40%;
+			height: 40%;
+			left: -50%;
+			top: 55%;
+			position: absolute;
+			animation: three 0.8s ease;
+		  	animation-direction:alternate;
+		  	animation-delay: 2.3s;
+		}
+	@keyframes three{
+		from{left: -50%;}
+		to{left: 52%;}
+		
+	}
+		#envelopes_two{
+			width: 45%;
+			height: 45%;
+			left: -50%;
+			top: 23%;
+			position: absolute;
+			animation: tow 0.8s ease;
+		  	animation-direction:alternate;
+		  	animation-delay: 2.5s;
+		}
+	@keyframes tow{
+		from{left: -50%;}
+		to{left: 65%;}
+		
+	}
+		#envelopes_two_c{
+			width: 45%;
+			height: 45%;
+			left: 65%;
+			top: 23%;
+			position: absolute;
+			animation: tow_c 0.5s infinite;
+		  	animation-direction:alternate;
+		  	animation-delay: 2.5s;
+		  	visibility: hidden;
+		  	
+		}
+	@keyframes tow_c{
+		0%{
+			transform: rotate(0deg);
+		}
+		50%{
+			transform: rotate(10deg);
+		}
+		55%{
+			transform: rotate(0deg);
+		}
+		60%{
+			transform: rotate(-10deg);
+		}
+		65%{
+			transform: rotate(0deg);
+		}
+		100%{
+			transform: rotate(0deg);
+		}
+	}
+
+		#box{
+			width: 40%;
+			height: 40%;
+			left: -50%;
+			top: 40%;
+			position: absolute;
+			animation: bb 2s ease;
+		  	animation-direction:alternate;
+		  	animation-delay: 2.7s;
+		}
+	@keyframes bb{
+		from{left: -50%;}
+		to{left: 15%;}
+		
+	}

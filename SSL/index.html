@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	
+	
+	<script src="jquery-3.6.1.min.js"></script>
+	<style type="text/css">
+	#vd{
+		position: absolute;
+		  top:50%;
+            left:50%;
+            transform: translate(-50%,50%);
+            visibility: hidden;
+            z-index:99;
+	}
+	#bgbl{
+		width: 100%;
+		height: 2000px;
+		opacity: 0.5;
+		position: absolute;
+		background-color: black;
+		visibility: hidden;
+		z-index:98;
+	}
+	</style>
+	
+	<body style="background-image: url(icon/cakeBg.png); background-size: cover;">
+
+<div id="bgbl" onclick="vd_ps()"></div>
+		<div id="loudspeaker" onclick="pp()">
+			<img src="icon/cake2_8.png" width="100%" height="100%"/>
+		</div>
+		<div id="icon_all">
+			<div id="flag">
+				<!--[if IE]>
+					<div id="flag_one"></div>
+				<div id="flag_middel"></div>
+				<div id="flag_two"></div>
+				<![endif]-->
+
+			</div>
+			<div id="cake">
+				</div>
+			<div id="gift">
+				<div id="envelopes_one">
+					<img src="icon/cake2_10.png" width="100%" height="100%" />
+				</div>
+				<div id="envelopes_two">
+					<img src="icon/cake2_10.png" width="100%" height="100%"/>
+				</div>
+				<div id="envelopes_two_c" onclick="open_video()">
+					<img src="icon/cake2_10.png" width="100%" height="100%"/>
+				</div>
+				<div id="envelopes_three">
+					<img src="icon/cake2_10.png" width="100%" height="100%"/>
+				</div>
+				<div id="box">
+					<img src="icon/cake2_6.png" width="100%" height="100%"/>
+				</div>
+			</div>
+			<div id="loud_right">
+				<img src="icon/cake2_8.png" width="100%" height="100%"/>
+			</div>
+			
+		
+		</div>
+		<audio id="ad" autoplay="autoplay"loop="loop"
+
+            src="Noble Kids Chorus - 生日快乐歌 (Happy Birthday).mp3">
+
+		</audio>
+		<video width="800" height="400" id="vd" controls>
+			<source src="movie.ogg" type="video/mp4"></source>
+			
+		</video>
+	</body>
+	<script>
+	$(document).ready(function($){
+		
+		setTimeout(()=> {
+			setInterval(()=>{
+				var music = document.getElementById("ad")
+			if(music.paused) {
+				music.play();
+				music.volume = 0.5;
+			}
+				
+			},100)
+			
+
+		},2700)
+		
+		
+		
+		
+		
+		
+		
+		
+	})
+	window.onload = function(){
+		var one = document.getElementById('envelopes_one');
+		var tow = document.getElementById('envelopes_two');
+		var three= document.getElementById('envelopes_three');
+		var box = document.getElementById('box');
+		var right = document.getElementById('loud_right');
+		var wc = document.getElementById('envelopes_two_c');
+		
+		var fg = document.getElementById('flag');
+		setTimeout(()=> {
+			right.style.cssText = "margin:115% 10% 0% 0%;";
+		},2000)
+		setTimeout(()=> {
+			one.style.cssText = "left: 32%;";
+		},2100)
+		setTimeout(()=> {
+			tow.style.cssText = "left: 65%;";
+		},2500)
+		
+		setTimeout(()=> {
+			three.style.cssText = "left: 52%;";
+		},2300)
+		setTimeout(()=> {
+			
+			box.style.cssText = "left: 15%;";
+		},2700)
+		
+		setTimeout(()=> {
+			wc.style.cssText = "visibility: visible;";
+			tow.style.cssText = "visibility: hidden;";
+		},4500);
+		
+		
+		setTimeout(()=> {
+			window.setInterval(()=> {
+			fg.style.cssText = "transform: rotateY(180deg);";
+			},1000)
+		
+		window.setInterval(()=> {
+			fg.style.cssText = "transform: rotateY(0deg);";
+			},2000)
+		},3000);
+		
+		
+		
+		
+	 
+		
+		
+	}
+		
+		
+	</script>
+	<script type="text/javascript">
+		function open_video(){
+			var music = document.getElementById("ad")
+			music.pause()
+			var video = document.getElementById("vd");
+			video.style.cssText = "visibility: visible;"
+			
+			var bg = document.getElementById("bgbl");
+			bg.style.cssText = "visibility: visible;"
+			
+		}
+		function vd_ps(){
+			var video = document.getElementById("vd");
+			video.pause();
+			video.style.cssText = "visibility: hidden;"
+			var bg = document.getElementById("bgbl");
+			bg.style.cssText = "visibility: hidden;"
+			var music = document.getElementById("ad")
+			music.play();
+		}
+		function pp(){
+			var music = document.getElementById("ad")
+			if(music.paused) {
+				music.play();
+			}
+			else{music.pause()}
+		}
+	</script>
+</html>
+
